@@ -1,0 +1,16 @@
+[Unit]
+Description=A4l-Pets API Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /home/mohammed.nawaz/a4l-pets-api/index.js
+WorkingDirectory=/home/mohammed.nawaz/a4l-pets-api
+Restart=always
+User=mohammed.nawaz
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
